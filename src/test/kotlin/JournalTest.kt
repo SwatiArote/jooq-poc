@@ -4,13 +4,11 @@ import dto.JournalDao
 import org.assertj.core.api.Assertions
 import org.jooq.DSLContext
 import org.jooq.impl.DSL
-import org.junit.After
+import org.junit.jupiter.api.*
 
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
 import java.sql.DriverManager
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class JournalTest{
 
     lateinit var dslContext: DSLContext
@@ -24,7 +22,7 @@ class JournalTest{
         val jou = Journal(null, "Springer Journal")
     }
 
-    @After
+    @AfterAll
     fun cleanUpContext() {
             dslContext.close()
     }

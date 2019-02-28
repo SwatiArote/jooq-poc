@@ -62,6 +62,7 @@ class ArticleTypeDao(private val dslContext: DSLContext) : BaseDao<ArticleTypes,
             .from(ARTICLETYPES)
             .join(JOURNAL)
             .on(JOU_ID.eq(MST_JOU_ID))
+            .where(JOU_ID.eq(jouId))
             .fetch()
             .into(ArticleTypes::class.java)
         }

@@ -7,12 +7,10 @@ import dto.JournalDao
 import org.assertj.core.api.Assertions
 import org.jooq.DSLContext
 import org.jooq.impl.DSL
-import org.junit.After
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.*
 import java.sql.DriverManager
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class ArticleTypesTest{
 
     lateinit var dslContext: DSLContext
@@ -27,7 +25,7 @@ class ArticleTypesTest{
 
     }
 
-    @After
+    @AfterAll
     fun cleanUpContext() {
             dslContext.close()
     }
@@ -58,5 +56,6 @@ class ArticleTypesTest{
         }
 
     }
+
 
 }
