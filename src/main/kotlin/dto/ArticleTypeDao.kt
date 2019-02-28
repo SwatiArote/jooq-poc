@@ -1,13 +1,14 @@
 package dto
 
-import App.Companion.ARTICLETYPES
-import App.Companion.JOURNAL
-import App.Companion.JOU_ID
-import App.Companion.MST_ID
-import App.Companion.MST_JOU_ID
-import App.Companion.MST_NAME
+
 import domain.ArticleTypes
 import org.jooq.DSLContext
+import schema.Tables.Companion.ARTICLETYPES
+import schema.Tables.Companion.JOURNAL
+import schema.Tables.Companion.JOU_ID
+import schema.Tables.Companion.MST_ID
+import schema.Tables.Companion.MST_JOU_ID
+import schema.Tables.Companion.MST_NAME
 
 class ArticleTypeDao(private val dslContext: DSLContext) : BaseDao<ArticleTypes, Int> {
 

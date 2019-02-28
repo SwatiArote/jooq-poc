@@ -1,5 +1,4 @@
-import App.Companion.ARTICLETYPES
-import App.Companion.JOURNAL
+
 import domain.ArticleTypes
 import domain.Journal
 import dto.ArticleTypeDao
@@ -8,6 +7,8 @@ import org.assertj.core.api.Assertions
 import org.jooq.DSLContext
 import org.jooq.impl.DSL
 import org.junit.jupiter.api.*
+import schema.Tables.Companion.ARTICLETYPES
+import schema.Tables.Companion.JOURNAL
 import java.sql.DriverManager
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)

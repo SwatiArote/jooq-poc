@@ -1,10 +1,11 @@
 package dto
 
-import App.Companion.JOURNAL
-import App.Companion.JOU_ID
-import App.Companion.JOU_NAME
+
 import domain.Journal
 import org.jooq.DSLContext
+import schema.Tables.Companion.JOURNAL
+import schema.Tables.Companion.JOU_ID
+import schema.Tables.Companion.JOU_NAME
 
 
 class JournalDao(private val dslContext: DSLContext) : BaseDao<Journal, Int> {

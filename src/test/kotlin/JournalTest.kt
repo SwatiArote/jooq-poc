@@ -1,10 +1,11 @@
-import App.Companion.JOURNAL
+
 import domain.Journal
 import dto.JournalDao
 import org.assertj.core.api.Assertions
 import org.jooq.DSLContext
 import org.jooq.impl.DSL
 import org.junit.jupiter.api.*
+import schema.Tables.Companion.JOURNAL
 
 import java.sql.DriverManager
 
